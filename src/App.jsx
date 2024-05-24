@@ -33,6 +33,12 @@ function App() {
     localStorage.setItem('contact', JSON.stringify(contacts));
   }, [contacts]);
 
+  const filteredContacts = contacts.filter((contact) =>
+    contact.name
+      .toLowerCase()
+      .split(" ")
+      .some((word) => word.startsWith(searchQuery.toLowerCase()))
+  );
 
   const handleSearch = (query) => {
     setSearchQuery(query);
