@@ -1,4 +1,4 @@
-import css from '../ContactForm.module.css';
+import css from './ContactForm.module.css';
 import { useId } from 'react';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
